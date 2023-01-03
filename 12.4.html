@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  body {
+    background-color: #333;
+  }
+
+  h2 {
+    text-align: center;
+    color: white;
+  }
+
+  .spinner1 {
+    border: 15px solid #f3f3f3;
+    background-color: #333;
+    border-radius: 50%;
+    border-top: 15px solid #fbc900;
+    width: 120px;
+    height: 120px;
+    margin: auto;
+    animation: spinn 2s linear infinite;
+    background-image: linear-gradient(#333, fbc900);
+
+  }
+
+  @keyframes spinn {
+    0% {
+      transform: rotate(0deg);
+
+    }
+
+    100% {
+      transform: rotate(360deg);
+
+    }
+  }
+
+  .spinner2 {
+    border: 15px solid #333;
+    background-color: #333;
+    border-radius: 50%;
+    border-top: 15px solid #fbc900;
+    border-bottom: 15px solid #fbc900;
+    width: 120px;
+    height: 120px;
+    margin: auto;
+    animation: spinn2 2s linear infinite;
+  }
+
+  .spinner3 {
+    margin: auto;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border-top: 5px solid #fbc900;
+    border-right: 5px solid transparent;
+    box-sizing: border-box;
+    animation: spinn2 1s linear infinite;
+  }
+
+
+
+  @keyframes spinn2 {
+    0% {
+      transform: rotate(0deg);
+
+    }
+
+    100% {
+      transform: rotate(360deg);
+
+    }
+  }
+
+
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .container4 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    margin-top: 50px;
+
+  }
+
+
+ .circle {
+    width: 20px;
+    height:20px;
+    background-color: azure;
+    border-radius: 50%;
+    margin-right: 2%;
+    text-align: center;
+  } 
+  
+  @keyframes scale{
+    0%{
+      transform:scale(1);
+    }
+    100%{
+      transform:scale(0);
+
+    }
+  }
+
+  .circle-4 {
+    animation-name: scale ;
+    animation-duration: 0.6s;
+    animation-delay:0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+
+    
+
+  }
+  .circle-5 {
+    animation-name: scale ;
+    animation-duration: 0.6s;
+    animation-delay:0.2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+
+  }
+  .circle-6 {
+    animation-name: scale ;
+    animation-duration: 0.6s;
+    animation-delay:0.4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+
+  } 
+   
+ .circle-1 {
+    animation-name: circles ;
+    animation-duration: 0.6s;
+    animation-delay:0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+  }
+  .circle-2 {
+    animation-name: circles ;
+    animation-duration: 0.6s;
+    animation-delay:0.2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+  .circle-3 {
+    animation-name: circles ;
+    animation-duration: 0.6s;
+    animation-delay:0.4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+  } 
+
+  @keyframes circles {
+    0% {
+      background-color: #fbc900;
+    }
+   100%{
+      background-color: azure;
+
+    }
+
+    
+    
+  }
+
+  /* .loader {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 32px 0 #fff, -32px 0 #fff;
+  position: relative;
+  animation: flash 0.5s ease-out infinite alternate;
+}
+
+@keyframes flash {
+  0% {
+    background-color: #fbc900;
+    box-shadow: 32px 0 #fbc900, -32px 0 #FFF;
+  }
+  50% {
+    background-color: #FFF;
+    box-shadow: 32px 0 #fbc900, -32px 0 #fbc900;
+  }
+  100% {
+    background-color: #fbc900;
+    box-shadow: 32px 0 #FFF, -32px 0 #fbc900;
+  }
+}
+ */
+
+
+      
+</style>
+
+<body>
+  <h2>spinner</h2>
+  <div class="container">
+    <div class="spinner1"></div>
+    <div class="spinner2"></div>
+    <div class="spinner3"></div>
+    <div class="container4">
+      <div class="loader"></div>
+      <div class="circle-1 circle"></div>
+      <div class="circle-2 circle"></div>
+      <div class="circle-3 circle"></div>
+    </div>
+    <div class="container4">
+      <div class="circle-4 circle"></div>
+      <div class="circle-5 circle"></div>
+      <div class="circle-6 circle "></div>
+    </div>
+
+  </div>
+
+</body>
+
+</html>

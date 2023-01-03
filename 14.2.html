@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>14.2</title>
+</head>
+<style>
+  .box {
+    border: 1px #ccc solid;
+    width: 100px;
+    height: 30px;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    margin: 10px;
+    overflow: hidden;
+  }
+
+  .container {}
+
+  .box-1::after {
+    content: '';
+    width: 100%;
+    height: 0px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: height 2s;
+    background-color: red;
+  }
+
+  .box-1:hover:after {
+    height: 100%;
+    content: 'cool';
+
+  }
+
+  .box-2::after {
+    content: '';
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: width 2s;
+    background-color: rgb(0, 26, 255);
+  }
+
+  .box-2:hover:after {
+    width: 100%;
+
+  }
+
+  .box-3::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(30deg)  rotate(60deg) translate(-40px , 80px);
+    z-index: 1;
+  }
+  .box-3:hover::after{
+    transform: rotate(0deg)  rotate(0deg) translate(0px , 0px);
+    transition: transform 1s;
+    background-color: rgb(255, 255, 0);
+    width: 100%;
+    z-index: -1;
+  }
+
+
+  .box-4::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform:scale(5) ;
+    font-size: 30px;
+  }
+  
+  .box-4:hover::after{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    content: 'scale';
+    width: 100%;
+    height: 100%;
+    transform:scale(1) ;  
+    transition:transform 2s ;
+    }
+
+
+    .box-5{
+      transform: skew(0deg) ;   
+    transform: rotate(0deg);
+    }
+  .box-5::after {
+    content: '';
+    width: 100%;
+    height: 0%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: skew(0deg) ;   
+    transform: rotate(0deg);
+  }
+  
+  .box-5:hover::after,.box-5:hover{
+    background-color: orchid;
+    transform: rotate(-10deg) skew(-10deg );
+    transition:transform   2s ;
+    content: 'skew';
+    height: 100%;
+    
+    }
+</style>
+
+<body>
+  <div class="container">
+    <div class="box box-1">Translate Y</div>
+    <div class="box box-2">Translate X</div>
+    <div class="box box-3"> Rotate</div>
+    <div class="box box-4">Scale</div>
+    <div class="box box-5">Skew</div>
+  </div>
+</body>
+
+</html>

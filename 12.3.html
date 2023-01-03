@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  nav{
+    display: flex;
+    justify-content: center;
+    padding: 7vh;
+  }
+
+  .nav a {
+    text-decoration: none;
+    padding: 2vh;
+    margin: 0 2vw; 
+    color: #333;
+    border: none;
+    position: relative;
+    width: 20vw;
+    text-align: center;
+    z-index: 10;
+
+  }
+
+   a::after{
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: 60px;
+    width: 110%;
+    height:20%;
+    z-index: -1;
+    transform: translate(-70px);
+  }
+  a:hover::after{
+    background-color: rgb(255, 255, 255);
+    z-index: -1;
+    transform: translate(0);
+    transition:transform 2s ;
+
+    
+  }
+
+  a::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 110%;
+    height:10%;
+    z-index: -1;
+    transform: translate(0px);
+  }
+  a:hover::before{
+    background-color: rgb(255, 255, 255);
+    z-index: -2;
+    transform: translate(-70px);
+    transition:transform 2s ;
+
+    
+  }
+a:hover{
+  border-top: #333 solid 1px;
+  border-bottom: #333 solid 1px;
+  z-index: 10;
+}
+</style>
+<body>
+    <section >
+      <nav class="nav">
+        <a class="" href="">Home</a>
+        <a href="">About</a>
+        <a href="">Services</a>
+        <a href="">Portfolio</a>
+        <a href="">Contact</a>
+      </nav>
+    </section>
+</body>
+</html>
