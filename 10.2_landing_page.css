@@ -1,0 +1,174 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
+:root {
+  --bg-dark: #333;
+  --white-color: #fff;
+  --dark-color: #333;
+
+}
+
+.nav {
+  width: 100vw;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7vh;
+  background-color: var(--bg-dark);
+}
+
+.nav a {
+  color: var(--white-color);
+  text-decoration: none;
+
+}
+
+.nav .leftside {}
+
+.nav .midSide {
+
+  justify-content: center;
+}
+
+.part-1 {
+  text-align: center;
+    background-image:url( 'https://media.istockphoto.com/id/157481286/photo/ice-mountain.jpg?s=612x612&w=0&k=20&c=c-HOTprUTT-986YLykIbnZGeFSEI1XwYJMqPacFdmsU=') ;
+  background-repeat:no-repeat ;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.8;
+
+}
+
+.part-1 .container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: (--dark-color);
+
+}
+
+.part-1 .container img {
+  width: 10vw;
+  border-radius: 50%;
+
+
+}
+.part-2{
+  background-color: var(--bg-dark);
+  color: var(--white-color);
+
+}
+.part-2 .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.section-1,
+.section-2 {
+  height: 50vh;
+  width: 48vw;
+  margin-right: 2vh;
+  margin-top: 2vh;
+}
+
+.article-2-right .container {
+  width: 40vw;
+  height: 40vh;
+  display: grid;
+  grid-template-columns: 25vw 30vw;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10vh;
+
+}
+.article-2{
+  padding: 10vh;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+}
+
+.section-2 .article-2-right .container p {
+  width: 20vh;
+  height: fit-content;
+}
+
+.part-3 .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.part-3 {
+  background-image: url('https://i.pinimg.com/originals/0b/15/04/0b1504f41ee4aacafac0a7bfc1d22606.jpg')  ;
+  background-repeat: no-repeat ;
+  background-position: center;
+  background-size: cover;
+  width: 100vw;
+  height: fit-content;
+  color: var(--white-color);
+  justify-content: center;
+
+
+}
+
+.part-3 h3,
+.part-3 h1 {
+  padding: 1vh;
+  font-size: 2rem;
+  padding-left: 5vw;
+}
+.part-3 h3{
+  padding-top: 2vh;
+}
+
+.ido {
+  width: 30vw;
+  height: 30vh;
+  padding: 2vh;
+}
+
+@media (max-width:500px) {
+  .nav {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  a {
+    display: block;
+    text-align: center;
+    padding: 1vh;
+  }
+
+  .nav .leftside {
+    margin: 0;
+    padding: 0;
+  }
+
+  .part-2 .container,
+  .part-3,
+  .article-2-right,
+  .section-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100vw;
+  }
+
+  .part-3 .container {}
+
+  .ido {
+    display: block;
+  }
+}
